@@ -4,7 +4,6 @@ pipeline {
     options {
         timeout(time: 1, unit: 'HOURS') // Evita que o container no Portainer trave por loops infinitos
         timestamps()                  // Insere o horário em cada linha do log (essencial para Troubleshooting)
-        ansiColor('xterm')            // Ativa cores nos logs do console (erros em vermelho, sucesso em verde)
         disableConcurrentBuilds()     // Impede que múltiplos pushes rodem ao mesmo tempo, poupando CPU
     }
 
